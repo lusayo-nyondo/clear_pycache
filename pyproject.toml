@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+version = "0.0.1"
+name = "clear_pycache"
+description = "A simple script to clear the pycache in a directory. Also supports recursive mode."
+license = { text = "MITLicense" }
+authors = [
+    { name = "Lusayo Nyondo", email = "lusayohendy@gmail.com" }
+]
+maintainers = [
+    { name = "Lusayo Nyondo", email = "lusayohendy@gmail.com" }
+]
+keywords = [ "pycache", "__pycache__", "clear" ]
+
+[project.urls]
+Homepage = "https://github.com/lusayo-nyondo/clear_pycache"
+Repository = "https://github.com/lusayo-nyondo/clear_pycache"
+Changelog = "https://github.com/lusayo-nyondo/clear_pycache/releases"
+Issues = "https://github.com/lusayo-nyondo/clear_pycache/issues"
+CI = "https://github.com/lusayo-nyondo/actions"
+
+[project.gui-scripts]
+clear_pycache = "clear_pycache:main"
