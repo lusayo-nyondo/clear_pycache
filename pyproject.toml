@@ -23,4 +23,4 @@ Issues = "https://github.com/lusayo-nyondo/clear_pycache/issues"
 CI = "https://github.com/lusayo-nyondo/actions"
 
 [project.scripts]
-clear_pycache = "clear_pycache:main"
+clearpycache = "clear_pycache:main"
