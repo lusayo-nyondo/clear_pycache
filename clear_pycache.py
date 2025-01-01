@@ -23,8 +23,7 @@ def main():
     parser.add_argument(
         "-r",
         "--recursive",
-        type=bool,
-        required=False,
+        action='store_true',
         default=False,
         help="Clear directory recursively."
     )
@@ -51,13 +50,15 @@ def clear_pycache(
         contents = os.listdir(path)
 
         for content in contents:
-            if content == '__pycache__':
-                shutil.rmtree(
-                    Path(content)
-                )
+            full_path = path / content
+
+            if content == '.git':
+                pass
+            elif content == '__pycache__':
+                shutil.rmtree(full_path)
             elif is_recursive:
                 clear_pycache(
-                    Path(content),
+                    full_path,
                     is_recursive=is_recursive
                 )
 
