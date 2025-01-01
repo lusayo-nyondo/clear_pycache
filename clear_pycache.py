@@ -52,9 +52,7 @@ def clear_pycache(
         for content in contents:
             full_path = path / content
 
-            if content == '.git':
-                pass
-            elif content == '__pycache__':
+            if content == '__pycache__':
                 shutil.rmtree(full_path)
             elif is_recursive:
                 clear_pycache(
